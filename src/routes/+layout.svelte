@@ -10,14 +10,16 @@
 	const MauseMove = (event: MouseEvent) => {
         if (video) {
 			// 動いた瞬間に速度を上げる
-            video.playbackRate = 5; 
+            video.playbackRate = 4; 
+
+			video.style.filter = `hue-rotate(${event.clientX / window.innerWidth * 360}deg) saturate(${event.clientY / window.innerHeight * 200}%)`;
 
 			// 前回の停止予約をリセットする
 			clearTimeout(timeoutId);
 
 			timeoutId = setTimeout(() => {
 				while (video.playbackRate > 1) {
-					video.playbackRate -= 1; // 徐々に速度を下げる
+					video.playbackRate -= 0.1; // 徐々に速度を下げる
 				}
 			}, 200);
         }
