@@ -10,10 +10,14 @@
 
     <div class="flex justify-center items-center">
 
-        <div class="box overflow-scroll bg-white/20 backdrop-blur-md shadow-blue fixed top-0 bottom-0 left-0 right-0 m-20 rounded-4xl flex flex-col items-center justify-center">
+        <div class="box overflow-auto bg-white/20 backdrop-blur-md shadow-blue fixed top-0 bottom-0 left-0 right-0 m-20 rounded-4xl flex justify-center">
 
-            <img src="/images/icon.svg" alt="daikon-icon" class="w-40 h-40 m-10 drop-shadow-2xlborder border-gray-400 drop-shadow-xl/80 bg-white rounded-full" />
-            <h1 class="font-bold text-white text-2xl">da1k0n</h1>
+            <div class="flex flex-col items-center">
+                <img src="/images/icon.svg" alt="daikon-icon" class="w-40 h-40 m-10 drop-shadow-2xl border border-gray-400 drop-shadow-xl/80 bg-white rounded-full" />
+                <img src="/images/da1k0n.svg" class="w-50 h-20"/>
+                <p class="text-white text-xl text-center mt-4">Webアプリ・ゲームを主に触ってます。<br>将来はシステムエンジニアになりたい！</p>
+            </div>  
+
         
         </div>
 
@@ -23,6 +27,8 @@
 
 <style>
 
-
+    .box {
+    scrollbar-width: none; /* Firefox */
+    }
 
 </style>
